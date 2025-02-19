@@ -726,7 +726,7 @@ self.weight.mark_for_reduction = ['cp']
 ```
 Shared weights need to have the same initialization (see [our implementation
 here](https://github.com/NERSC/dl-at-scale-training/blob/main/distributed/helpers.py#L5-L30)). If the input activation grads are sharded, then the
-weight gradients for the shared weights need an additional AllReduce. Check out the [comm_hooks](https://github.com/NERSC/dl-at-scale-training/blob/main/distributed/mappings.py#L170-L243), we have implemented to do an additional AllReduce of the weight gradients across the `cp` group. 
+weight gradients for the shared weights need an additional AllReduce. Check out the [comm_hooks](https://github.com/NERSC/dl-at-scale-training/blob/main/distributed/mappings.py#L224-L276), we have implemented to do an additional AllReduce of the weight gradients across the `cp` group. 
 
 **Note:** The right combination of data, tensor, context, and pipeline (if needed) parallelism along with the parallelization order (which group to place on NVLink, for example) requires deep understanding of the sensitivity of the performance to each of these moving parts (as well as the underlying hardware). Typically, engineers build *performance models* to analyze this and discover *optimal* ways to parallelize their model. If you are interested in going deeper and building this intuition, you can check out [performance models for transformers in science](https://arxiv.org/abs/2410.00273).
 
