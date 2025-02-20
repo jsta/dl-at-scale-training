@@ -16,7 +16,7 @@ This repository contains the example code material for the NERSC training event:
 
 Slides: 
 
-Join the Slack workspace: 
+Join the Slack workspace: https://join.slack.com/t/nersc-dl-tutorial/shared_invite/zt-30e2iiexd-C8pUrroqeA7O3cD5~AsdtQ
 
 NERSC JupyterHub: https://jupyter.nersc.gov
 
