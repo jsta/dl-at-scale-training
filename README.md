@@ -88,7 +88,7 @@ Based on the selected configuration, the train script will then:
     * Calling `backward()` on the loss value to backpropagate gradients. Note the use of the `grad_scaler` will be explained below when enabling mixed precision.
     * Applying the model to the validation dataset and logging training and validation metrics to visualize in TensorBoard (see if you can find where we construct the TensorBoard `SummaryWriter` and where our specific metrics are logged via the `add_scalar` call).
 
-More info on the model and data can be found in the [slides](https://drive.google.com/drive/u/2/folders/1IfHYBBduBOobWEHzeuzoL8zGSKyTGKj9). If you are experimenting with this repository after the tutorial date, you can download the data from here: https://portal.nersc.gov/project/dasrepo/pharring/sc23_data.
+More info on the model and data can be found in the [slides](https://drive.google.com/drive/folders/1YmbJso3rjaiuP8DcE0ItxSJTSq3DTtU9?usp=sharing). If you are experimenting with this repository after the tutorial date, you can download the data from here: https://portal.nersc.gov/project/dasrepo/pharring/sc23_data.
 Note that you will have to adjust the data path in `submit_pm.sh` to point your personal copy after downloading.
 
 ## Single GPU training
